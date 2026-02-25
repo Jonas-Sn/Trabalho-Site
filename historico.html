@@ -2,7 +2,7 @@
 <html lang=pt-BR data-qb-installed=true><!--
  Page saved with SingleFile 
  url: https://sgt.bnet.dev.br/ordens-servico/5477 
- saved date: Tue Feb 24 2026 17:21:37 GMT-0300 (Horário Padrão de Brasília)
+ saved date: Wed Feb 25 2026 14:21:42 GMT-0300 (Horário Padrão de Brasília)
 -->
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width, initial-scale=1.0">
@@ -62,13 +62,6 @@
         --tw-contain-layout: ;
         --tw-contain-paint: ;
         --tw-contain-style:
-    }
-
-    .line-clamp-4 {
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
     }
 
     ::backdrop {
@@ -206,8 +199,15 @@
         font: inherit
     }
 
-    h3 {
+    h3,
+    p {
         margin: 0
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0
     }
 
     input::-moz-placeholder,
@@ -284,8 +284,9 @@
         z-index: 30
     }
 
-    .col-span-1 {
-        grid-column: span 1/span 1
+    .mx-1 {
+        margin-left: .25rem;
+        margin-right: .25rem
     }
 
     .mx-auto {
@@ -293,12 +294,20 @@
         margin-right: auto
     }
 
+    .mb-1 {
+        margin-bottom: .25rem
+    }
+
     .mb-4 {
         margin-bottom: 1rem
     }
 
-    .mt-6 {
-        margin-top: 1.5rem
+    .mt-1 {
+        margin-top: .25rem
+    }
+
+    .mt-3 {
+        margin-top: .75rem
     }
 
     .flex {
@@ -307,10 +316,6 @@
 
     .inline-flex {
         display: inline-flex
-    }
-
-    .grid {
-        display: grid
     }
 
     .hidden {
@@ -339,6 +344,10 @@
 
     .h-screen {
         height: 100vh
+    }
+
+    .max-h-full {
+        max-height: 100%
     }
 
     .w-0 {
@@ -401,8 +410,8 @@
         user-select: none
     }
 
-    .grid-cols-1 {
-        grid-template-columns: repeat(1, minmax(0, 1fr))
+    .list-disc {
+        list-style-type: disc
     }
 
     .flex-col {
@@ -433,14 +442,16 @@
         gap: .75rem
     }
 
-    .gap-6 {
-        gap: 1.5rem
+    .space-y-1>:not([hidden])~:not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(.25rem*calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(.25rem*var(--tw-space-y-reverse))
     }
 
-    .space-y-3>:not([hidden])~:not([hidden]) {
+    .space-y-4>:not([hidden])~:not([hidden]) {
         --tw-space-y-reverse: 0;
-        margin-top: calc(.75rem*calc(1 - var(--tw-space-y-reverse)));
-        margin-bottom: calc(.75rem*var(--tw-space-y-reverse))
+        margin-top: calc(1rem*calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1rem*var(--tw-space-y-reverse))
     }
 
     .overflow-hidden {
@@ -455,6 +466,14 @@
         white-space: nowrap
     }
 
+    .whitespace-pre-wrap {
+        white-space: pre-wrap
+    }
+
+    .break-all {
+        word-break: break-all
+    }
+
     .rounded-full {
         border-radius: 9999px
     }
@@ -465,6 +484,10 @@
 
     .rounded-md {
         border-radius: calc(var(--radius) - 2px)
+    }
+
+    .rounded-xl {
+        border-radius: .75rem
     }
 
     .border {
@@ -489,6 +512,11 @@
 
     .border-\[\#ff5500\]\/20 {
         border-color: #f503
+    }
+
+    .border-gray-200 {
+        --tw-border-opacity: 1;
+        border-color: rgb(229 231 235/var(--tw-border-opacity))
     }
 
     .border-orange-600 {
@@ -584,12 +612,21 @@
         padding-bottom: 1rem
     }
 
+    .pl-5 {
+        padding-left: 1.25rem
+    }
+
     .pr-1 {
         padding-right: .25rem
     }
 
     .text-\[10px\] {
         font-size: 10px
+    }
+
+    .text-base {
+        font-size: 1rem;
+        line-height: 1.5rem
     }
 
     .text-lg {
@@ -643,9 +680,19 @@
         color: rgb(75 85 99/var(--tw-text-opacity))
     }
 
+    .text-gray-700 {
+        --tw-text-opacity: 1;
+        color: rgb(55 65 81/var(--tw-text-opacity))
+    }
+
     .text-gray-800 {
         --tw-text-opacity: 1;
         color: rgb(31 41 55/var(--tw-text-opacity))
+    }
+
+    .text-gray-900 {
+        --tw-text-opacity: 1;
+        color: rgb(17 24 39/var(--tw-text-opacity))
     }
 
     .text-orange-600 {
@@ -675,12 +722,6 @@
 
     .underline {
         text-decoration-line: underline
-    }
-
-    .shadow {
-        --tw-shadow: 0 1px 3px 0 rgb(0 0 0/.1), 0 1px 2px -1px rgb(0 0 0/.1);
-        --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-        box-shadow: var(--tw-ring-offset-shadow, 0 0#0000), var(--tw-ring-shadow, 0 0#0000), var(--tw-shadow)
     }
 
     .shadow-sm {
@@ -1476,10 +1517,6 @@
             width: 5rem
         }
 
-        .md\:grid-cols-2 {
-            grid-template-columns: repeat(2, minmax(0, 1fr))
-        }
-
         .md\:p-2 {
             padding: .5rem
         }
@@ -1885,305 +1922,104 @@
             </aside>
             <div class="flex flex-col flex-1 transition-all duration-300 ease-in-out md:ml-0">
                 <main class="flex-1 overflow-y-auto p-2 md:p-2">
-                    <div class="mb-4 flex justify-end">
-                        <a href="naoatendido.html"
-                            class="justify-center whitespace-nowrap rounded-md text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow-sm hover:text-accent-foreground h-9 px-4 py-2 inline-flex items-center gap-2 bg-[#ff5500] text-white hover:bg-orange-700 active:bg-orange-800 border border-transparent">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-arrow-left">
+                    <div class="mb-4 flex justify-end"><button
+                            class="justify-center whitespace-nowrap rounded-md text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow-sm hover:text-accent-foreground h-9 px-4 py-2 inline-flex items-center gap-2 bg-[#ff5500] text-white hover:bg-orange-700 active:bg-orange-800 border border-transparent"
+                            type=button aria-label=Voltar><svg xmlns=http://www.w3.org/2000/svg width=16 height=16
+                                viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                stroke-linejoin=round class="lucide lucide-arrow-left" data-darkreader-inline-stroke
+                                style=--darkreader-inline-stroke:currentColor>
                                 <path d="m12 19-7-7 7-7"></path>
                                 <path d="M19 12H5"></path>
-                            </svg>
-
-                            Mudar Status
-                        </a>
-                    </div>
-                    <div class="border-b mb-4 flex gap-2"><button
-                            class="px-4 py-2 text-sm font-medium border-b-2 border-orange-600 text-orange-600">Geral</button><button onclick="window.location.href='historico.html'"
-                            class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800">Histórico</button><button
+                            </svg>Voltar</button></div>
+                    <div class="border-b mb-4 flex gap-2"><button onclick="window.location.href='index.html'"
+                            class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800">Geral</button><button
+                            class="px-4 py-2 text-sm font-medium border-b-2 border-orange-600 text-orange-600">Histórico</button><button
                             class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800">Materiais</button>
                     </div>
-                    <div class="space-y-6 p-2">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="bg-white rounded-lg overflow-hidden shadow p-4 col-span-1">
-                                <div class=p-4>
-                                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Detalhes da OS</h3>
-                                    <div class=space-y-3>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                    height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                    stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                    class="lucide lucide-file-text">
-                                                    <path
-                                                        d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
-                                                    </path>
-                                                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                                                    <path d="M10 9H8"></path>
-                                                    <path d="M16 13H8"></path>
-                                                    <path d="M16 17H8"></path>
-                                                </svg></div>
-                                            <div class="font-semibold text-gray-800">Ticket:</div>
-                                            <div class=text-gray-600>Ativação</div>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                    height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                    stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                    class="lucide lucide-file-text">
-                                                    <path
-                                                        d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
-                                                    </path>
-                                                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                                                    <path d="M10 9H8"></path>
-                                                    <path d="M16 13H8"></path>
-                                                    <path d="M16 17H8"></path>
-                                                </svg></div>
-                                            <div class="font-semibold text-gray-800">Prioridade:</div>
-                                            <div class=text-gray-600>ALTA</div>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                    height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                    stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                    class="lucide lucide-users">
-                                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                                    <circle cx=9 cy=7 r=4></circle>
-                                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                                </svg></div>
-                                            <div class="font-semibold text-gray-800">Equipe:</div>
-                                            <div class=text-gray-600>Suporte Escritório / Externa</div>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                    height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                    stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                    class="lucide lucide-users">
-                                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                                    <circle cx=9 cy=7 r=4></circle>
-                                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                                </svg></div>
-                                            <div class="font-semibold text-gray-800">Técnico Responsavel:</div>
-                                            <div class=text-gray-600>Jonas Saldanha Nunes</div>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                    height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                    stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                    class="lucide lucide-file-text">
-                                                    <path
-                                                        d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
-                                                    </path>
-                                                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                                                    <path d="M10 9H8"></path>
-                                                    <path d="M16 13H8"></path>
-                                                    <path d="M16 17H8"></path>
-                                                </svg></div>
-                                            <div class="font-semibold text-gray-800">Motivo:</div>
-                                            <div class=text-gray-600>Avaliação da instalação</div>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                    height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                    stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                    class="lucide lucide-file-text">
-                                                    <path
-                                                        d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
-                                                    </path>
-                                                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                                                    <path d="M10 9H8"></path>
-                                                    <path d="M16 13H8"></path>
-                                                    <path d="M16 17H8"></path>
-                                                </svg></div>
-                                            <div class="font-semibold text-gray-800">Descrição: </div>
-                                            <div class=text-gray-600>
-                                                Iremos até o local realizar a avaliação da instalação realizada.</div>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                    height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                    stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                    class="lucide lucide-map-pin">
-                                                    <path
-                                                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                                                    </path>
-                                                    <circle cx=12 cy=10 r=3></circle>
-                                                </svg></div>
-                                            <div class="font-semibold text-gray-800">Local:</div>
-                                            <div class=text-gray-600>Rua teste
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                    height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                    stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                    class="lucide lucide-map-pin">
-                                                    <path
-                                                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                                                    </path>
-                                                    <circle cx=12 cy=10 r=3></circle>
-                                                </svg></div>
-                                            <div class="font-semibold text-gray-800">GPS:</div>
-                                            <div class=text-gray-600><a
-                                                    href="https://www.google.com/maps?q=-30.337704836622454,-54.31763689408012"
+                    <div class=p-4>
+                        <div class=p-4>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-4">Histórico</h3>
+                            <div class="space-y-4 max-h-full overflow-y-auto">
+                                <div class="relative rounded-xl border border-gray-200 bg-white shadow-sm p-4">
+                                    <div class="text-base font-semibold text-gray-900">Abertura de OS</div>
+                                    <div class="text-xs text-gray-500 mt-1">08/12/2025, 18:14:10 <span
+                                            class=mx-1>por</span>Dhariane Ferreira de&nbsp;Lima</div>
+                                    <div class="mt-3 rounded-md bg-gray-100 p-3">
+                                        <p class="text-sm text-gray-700 whitespace-pre-wrap">Histórico gerado
+                                            automaticamente na abertura de OS.</p>
+                                    </div>
+                                </div>
+                                <div class="relative rounded-xl border border-gray-200 bg-white shadow-sm p-4">
+                                    <div class="text-base font-semibold text-gray-900">OS Atribuída Automaticamente
+                                    </div>
+                                    <div class="text-xs text-gray-500 mt-1">13/12/2025, 14:36:30 <span
+                                            class=mx-1>por</span>Sistema</div>
+                                    <div class="mt-3 rounded-md bg-gray-100 p-3">
+                                        <p class="text-sm text-gray-700 whitespace-pre-wrap">OS 5477 atribuída a Jonas
+                                            Saldanha Nunes no turno atual.</p>
+                                    </div>
+                                </div>
+                                <div class="relative rounded-xl border border-gray-200 bg-white shadow-sm p-4">
+                                    <div class="text-base font-semibold text-gray-900">Atendimento Parcial</div>
+                                    <div class="text-xs text-gray-500 mt-1">13/12/2025, 17:34:55 <span
+                                            class=mx-1>por</span>Jonas Saldanha Nunes</div>
+                                    <div class="mt-3 rounded-md bg-gray-100 p-3">
+                                        <p class="text-sm text-gray-700 whitespace-pre-wrap">Estivemos no local e fomos
+                                            recebidos pela titular. Por conta da tubulação, não foi possível realizar a
+                                            ativação pois o cabeamento passa por uma tubulação no interior da corretora
+                                            de seguros, que só funciona em horário comercial. Por conta disso, será
+                                            necessário reagendar a mesma para segunda.
+
+                                            Na parte interna foi possível identificar o caminho até o apartamento
+                                            Por conta disso não foi possível realizar todo serviço, sendo necessário
+                                            reagendar o pedido.</p>
+                                    </div>
+                                </div>
+                                <div class="relative rounded-xl border border-gray-200 bg-white shadow-sm p-4">
+                                    <div class="text-base font-semibold text-gray-900">OS Atribuída Automaticamente
+                                    </div>
+                                    <div class="text-xs text-gray-500 mt-1">15/12/2025, 08:56:00 <span
+                                            class=mx-1>por</span>Sistema</div>
+                                    <div class="mt-3 rounded-md bg-gray-100 p-3">
+                                        <p class="text-sm text-gray-700 whitespace-pre-wrap">OS 5477 atribuída a Jonas
+                                            Saldanha Nunes no turno atual.</p>
+                                    </div>
+                                </div>
+                                <div class="relative rounded-xl border border-gray-200 bg-white shadow-sm p-4">
+                                    <div class="text-base font-semibold text-gray-900">OS Finalizada</div>
+                                    <div class="text-xs text-gray-500 mt-1">15/12/2025, 12:15:21 <span
+                                            class=mx-1>por</span>Jonas Saldanha Nunes</div>
+                                    <div class="mt-3 rounded-md bg-gray-100 p-3">
+                                        <p class="text-sm text-gray-700 whitespace-pre-wrap">Fui recebido pela titular.
+                                            Se trata de uma casa média com sala, cozinha, área de serviço, 2 quartos, 3
+                                            banheiros e área de lazer.
+                                            O roteador ficou localizado na sala, área central da residência na altura da
+                                            cabeça. O teste de abrangência no ponto mais distante (área de lazer) foi de
+                                            -62 em ambas as redes.
+                                            Uso da cliente será para 3 celulares, 2 tvs Smart, 1 computador e 1
+                                            videogame.
+
+                                            Cliente foi explicado sobre os streamings e sobre a promoção indique um
+                                            amigo. Também auxiliada sobre o aplicativo.</p>
+                                    </div>
+                                    <div class=mt-3>
+                                        <div class="text-xs font-medium text-gray-600 mb-1">Anexos:</div>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li><a href=https://apisgt.bnet.dev.br/uploads/historico/7ab7496e-2db4-4e01-ba5e-5c0df90f7707.png
                                                     target=_blank rel="noopener noreferrer"
-                                                    class="text-blue-600 underline hover:text-blue-700"
-                                                    title="Abrir no Google Maps">-30.337705, -54.317637</a></div>
-                                        </div>
+                                                    class="text-sm underline break-all text-blue-600 hover:text-blue-700"
+                                                    data-state=closed>signature_1765811719312.png</a>
+                                            <li><a href=https://apisgt.bnet.dev.br/uploads/historico/30752b9f-4d52-42c4-a5a3-a9ca6e4e09cc.jpeg
+                                                    target=_blank rel="noopener noreferrer"
+                                                    class="text-sm underline break-all text-blue-600 hover:text-blue-700"
+                                                    data-state=closed>d91748b7-cfa5-4de2-b00e-730623857d70.jpeg</a>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg overflow-hidden shadow p-4 col-span-1">
-                                <div class=p-4>
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Agendamento</h3>
-                                        <div class=space-y-3>
-                                            <div class="flex items-center gap-3 text-sm">
-                                                <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                        height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                        stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                        class="lucide lucide-calendar">
-                                                        <path d="M8 2v4"></path>
-                                                        <path d="M16 2v4"></path>
-                                                        <rect width=18 height=18 x=3 y=4 rx=2></rect>
-                                                        <path d="M3 10h18"></path>
-                                                    </svg></div>
-                                                <div class="font-semibold text-gray-800">Data:</div>
-                                                <div class=text-gray-600>15/12/2025</div>
-                                            </div>
-                                            <div class="flex items-center gap-3 text-sm">
-                                                <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                        height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                        stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                        class="lucide lucide-users">
-                                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                                        <circle cx=9 cy=7 r=4></circle>
-                                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                                    </svg></div>
-                                                <div class="font-semibold text-gray-800">Turno:</div>
-                                                <div class=text-gray-600>MANHA</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=mt-6>
-                                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Metragem</h3>
-                                        <div class=space-y-3>
-                                            <div class="flex items-center gap-3 text-sm">
-                                                <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                        height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                        stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                        class="lucide lucide-map-pin">
-                                                        <path
-                                                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                                                        </path>
-                                                        <circle cx=12 cy=10 r=3></circle>
-                                                    </svg></div>
-                                                <div class="font-semibold text-gray-800">CTO:</div>
-                                                <div class=text-gray-600>Não informado</div>
-                                            </div>
-                                            <div class="flex items-center gap-3 text-sm">
-                                                <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                        height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                        stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                        class="lucide lucide-map-pin">
-                                                        <path
-                                                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                                                        </path>
-                                                        <circle cx=12 cy=10 r=3></circle>
-                                                    </svg></div>
-                                                <div class="font-semibold text-gray-800">Porta:</div>
-                                                <div class=text-gray-600>Não informado</div>
-                                            </div>
-                                            <div class="flex items-center gap-3 text-sm">
-                                                <div class=text-gray-500><svg xmlns=http://www.w3.org/2000/svg width=16
-                                                        height=16 viewBox="0 0 24 24" fill=none stroke=currentColor
-                                                        stroke-width=2 stroke-linecap=round stroke-linejoin=round
-                                                        class="lucide lucide-map-pin">
-                                                        <path
-                                                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                                                        </path>
-                                                        <circle cx=12 cy=10 r=3></circle>
-                                                    </svg></div>
-                                                <div class="font-semibold text-gray-800">Metragem:</div>
-                                                <div class=text-gray-600>Não informado</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow rounded-lg border border-slate-200 mb-6 overflow-hidden">
-
-                        <!-- Cabeçalho -->
-                        <div class="bg-green-600 px-4 py-3 flex items-center justify-between">
-                            <h3 class="text-black font-semibold flex items-center gap-2" style="margin-top: 10px;">
-                                OS Finalizada
-                            </h3>
-                            <span class="text-sm text-green-100" style="margin-top: 10px;">
-                                12/02/2026 às 18:47
-                            </span>
-                        </div>
-
-                        <!-- Conteúdo -->
-                        <div class="p-4">
-
-                            <!-- Descrição -->
-                            <div class="mb-4">
-                                <p class="text-sm font-medium text-gray-800 mb-1">Descrição do atendimento</p>
-                                <div id="descricao"
-                                    class="bg-slate-50 border border-slate-200 rounded-md p-3 text-sm text-gray-600 leading-relaxed transition-all duration-300"
-                                    style="max-height: 40px; overflow: hidden;">
-                                    Fui recebido pela titular. Se trata de uma casa média com sala, cozinha, área de
-                                    serviço, 2 quartos, 3 banheiros e área de lazer.<br><br>
-
-                                    O roteador ficou localizado na sala, área central da residência na altura da cabeça. <br>
-                                    O teste de abrangência no ponto mais distante (área de lazer) foi de -62 em ambas as
-                                    redes.<br> <br>
-
-                                    Uso da cliente será para 3 celulares, 2 tvs Smart, 1 computador e 1 videogame. <br>
-                                    Cliente foi explicado sobre os streamings e sobre a promoção indique um amigo. <br>
-                                    Também auxiliada sobre o aplicativo.
-                                </div>
-                                <button id="btnToggle" onclick="toggleDescricao()"
-                                    class="mt-2 text-sm text-orange-600 hover:text-orange-800 font-medium">
-                                    Ver mais
-                                </button>
-                            </div>
-
-                            <!-- Técnico -->
-                            <div class="mb-3 text-sm text-gray-700">
-                                <strong>Técnico responsável:</strong> Jonas Saldanha Nunes
-                            </div>
-
-                            <!-- Anexos -->
-                            <div class="text-sm text-gray-700">
-                                <strong>Anexos:</strong>
-                                <span class="text-gray-500">Nenhum anexo enviado</span>
-                            </div>
-
                         </div>
                     </div>
                 </main>
             </div>
         </div>
     </div>
-
-    <script>
-        function toggleDescricao() {
-            const descricao = document.getElementById("descricao");
-            const botao = document.getElementById("btnToggle");
-
-            if (descricao.style.maxHeight !== "none") {
-                descricao.style.maxHeight = "none";
-                botao.innerText = "Ver menos";
-            } else {
-                descricao.style.maxHeight = "35px";
-                botao.innerText = "Ver mais";
-            }
-        }
-    </script>
-</body>
